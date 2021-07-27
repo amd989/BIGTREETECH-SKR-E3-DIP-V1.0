@@ -508,14 +508,14 @@ namespace ExtUI {
   void onPrintTimerStarted() { write_to_lcd_P(PSTR("{SYS:BUILD}")); }
   void onPrintTimerPaused() {}
   void onPrintTimerStopped() { write_to_lcd_P(PSTR("{TQ:100}")); }
+  void onFilamentRunout(const extruder_t extruder) { set_lcd_error_P(GET_TEXT(MSG_FILAMENTLOAD)); }
 
   // Not needed for Malyan LCD
   void onStatusChanged(const char * const) {}
   void onMediaInserted() {};
   void onMediaError() {};
   void onMediaRemoved() {};
-  void onPlayTone(const uint16_t, const uint16_t) {}
-  void onFilamentRunout(const extruder_t extruder) {}
+  void onPlayTone(const uint16_t, const uint16_t) {}  
   void onUserConfirmRequired(const char * const) {}
   void onFactoryReset() {}
   void onStoreSettings(char*) {}
